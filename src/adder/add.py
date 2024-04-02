@@ -1,9 +1,16 @@
 import sys
 
-def main():
-    numbers = [float(arg) for arg in sys.argv[1:]]
+
+
+def add(*args):
+    strings = list(*args)
+    numbers = [float(arg) for arg in strings]
     
-    print(sum(numbers))    
+    return sum(numbers)
+
+def main():
+    
+    print(add(sys.argv[1:]))    
 
 if __name__ == '__main__':
     main()
